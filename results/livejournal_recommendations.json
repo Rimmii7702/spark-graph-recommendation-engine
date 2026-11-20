@@ -1,0 +1,493 @@
+{
+  "generated_utc": "2026-11-20T17:32:29.889349+00:00",
+  "input": "data/soc-LiveJournal1Adj.txt",
+  "dataset_kind": "real LiveJournal course adjacency",
+  "method": "both",
+  "random_seed": 42,
+  "top_k": 10,
+  "test_fraction": 0.2,
+  "vertex_count": 49995,
+  "undirected_edge_count": 330798,
+  "train_undirected_edges": 264583,
+  "held_out_undirected_edges": 66215,
+  "selected_evaluation_users": [
+    1704,
+    5130,
+    5501,
+    14806,
+    14816,
+    22761,
+    24408,
+    24508,
+    38346,
+    42559
+  ],
+  "evaluation_protocol": "Canonical undirected edge split before reverse directions; held-out friendships available as recommendations",
+  "results": {
+    "mutual_friends": {
+      "metrics": {
+        "evaluated_users": 10,
+        "precision_at_k": 0.06,
+        "recall_at_k": 0.23,
+        "hit_rate_at_k": 0.3,
+        "coverage": 1.0,
+        "hits": 6,
+        "held_out_links_for_evaluated_users": 26,
+        "k": 10
+      },
+      "runtime_seconds": 91.674,
+      "top_k_recommendations": {
+        "1704": [
+          18418,
+          18425,
+          22303,
+          42905,
+          2862,
+          2876,
+          4240,
+          4321,
+          7425,
+          8531
+        ],
+        "5130": [
+          5114,
+          5125,
+          5142,
+          5144,
+          5147,
+          113,
+          2017,
+          2443,
+          2501,
+          2534
+        ],
+        "5501": [
+          5497,
+          5516,
+          5472,
+          5485,
+          5477,
+          5482,
+          5483,
+          5488,
+          5505,
+          5509
+        ],
+        "14806": [
+          14825,
+          14827,
+          14819,
+          14820,
+          14841,
+          1077,
+          14801,
+          14813,
+          14815,
+          14828
+        ],
+        "14816": [
+          14806,
+          14849,
+          14801,
+          14804,
+          14811,
+          14813,
+          14814,
+          14815,
+          14819,
+          14820
+        ],
+        "22761": [
+          39481,
+          917,
+          7493,
+          11094,
+          14824,
+          15588,
+          17556,
+          30984,
+          31001,
+          31010
+        ],
+        "24408": [
+          6966,
+          23717,
+          32433,
+          49617,
+          1393,
+          1933,
+          2914,
+          3394,
+          6976,
+          6980
+        ],
+        "24508": [
+          1846,
+          7580,
+          11466,
+          11473,
+          14495,
+          14507,
+          19358,
+          20821,
+          24473,
+          24475
+        ],
+        "38346": [
+          321,
+          624,
+          1772,
+          1791,
+          2676,
+          3896,
+          4104,
+          4738,
+          5051,
+          5100
+        ],
+        "42559": [
+          13976,
+          35731,
+          7494,
+          13930,
+          13973,
+          13993,
+          13998,
+          14090,
+          14134,
+          14164
+        ]
+      }
+    },
+    "als": {
+      "metrics": {
+        "evaluated_users": 10,
+        "precision_at_k": 0.0,
+        "recall_at_k": 0.0,
+        "hit_rate_at_k": 0.0,
+        "coverage": 1.0,
+        "hits": 0,
+        "held_out_links_for_evaluated_users": 26,
+        "k": 10
+      },
+      "binary_interaction_evaluation": {
+        "train_binary_interactions": 1057578,
+        "test_binary_interactions": 264531,
+        "scored_test_interactions": 261074,
+        "test_score_coverage": 0.986932,
+        "test_sampled_binary_rmse": 0.301713,
+        "hyperparameters": {
+          "rank": 10,
+          "reg_param": 0.1,
+          "max_iter": 8
+        },
+        "cross_validation": false,
+        "negative_pool_size": 20000,
+        "note": "RMSE uses observed positives and sampled nonedges; ranking metrics use held-out positive edges."
+      },
+      "runtime_seconds": 111.534,
+      "top_k_recommendations": {
+        "1704": [
+          1743,
+          11449,
+          8030,
+          26303,
+          48266,
+          22924,
+          44635,
+          713,
+          13443,
+          6573
+        ],
+        "5130": [
+          15174,
+          16596,
+          32936,
+          2295,
+          29292,
+          9288,
+          2124,
+          43455,
+          42615,
+          42364
+        ],
+        "5501": [
+          847,
+          842,
+          22216,
+          840,
+          844,
+          846,
+          848,
+          843,
+          22215,
+          46889
+        ],
+        "14806": [
+          17745,
+          47017,
+          36170,
+          14837,
+          33174,
+          14819,
+          14842,
+          14805,
+          14840,
+          26039
+        ],
+        "14816": [
+          36177,
+          20687,
+          26446,
+          5395,
+          29031,
+          29744,
+          33724,
+          35244,
+          39515,
+          16014
+        ],
+        "22761": [
+          23390,
+          10642,
+          22445,
+          39503,
+          23400,
+          23378,
+          31005,
+          23418,
+          39556,
+          23406
+        ],
+        "24408": [
+          6959,
+          33144,
+          40173,
+          16837,
+          48309,
+          8551,
+          16827,
+          7046,
+          5384,
+          29144
+        ],
+        "24508": [
+          16596,
+          9410,
+          1933,
+          27010,
+          29292,
+          7960,
+          2124,
+          32929,
+          46267,
+          32928
+        ],
+        "38346": [
+          26446,
+          2983,
+          4496,
+          15588,
+          5429,
+          28374,
+          13337,
+          4845,
+          22095,
+          32060
+        ],
+        "42559": [
+          36660,
+          9938,
+          50,
+          23565,
+          38133,
+          2006,
+          17493,
+          30402,
+          27473,
+          28944
+        ]
+      }
+    }
+  },
+  "method_comparison": {
+    "compared_users": 10,
+    "mean_overlap_at_k": 0.1,
+    "total_overlap_at_k": 1
+  },
+  "total_runtime_seconds": 305.882,
+  "dataset_source": "Original CS6350 assignment adjacency file",
+  "verification": {
+    "input_validation": {
+      "sha256": "964b93f1e58cce5377c9003eea6be12d24883f58299dfec97ee05f070b1ebf2d",
+      "bytes": 4156181,
+      "adjacency_rows": 49995,
+      "vertices": 49995,
+      "isolated_vertices": 871,
+      "directed_adjacency_entries": 661596,
+      "unique_undirected_edges": 330798,
+      "missing_reciprocal_entries": 0
+    },
+    "split_validation": {
+      "train_edges": 264583,
+      "test_edges": 66215,
+      "overlapping_edges": 0,
+      "matches_all_input_edges": true,
+      "eligible_evaluation_users": 36014,
+      "held_out_edge_sha256": "9f541b2592aa20b2e3c12fae05060685d40aa54ea16fadbc0e5101421778bd51"
+    },
+    "als_interaction_validation": {
+      "train_positive": 529166,
+      "train_sampled_negative": 528412,
+      "test_positive": 132430,
+      "test_sampled_negative": 132101
+    },
+    "environment": {
+      "spark": "4.2.0",
+      "python": "3.13.14",
+      "java": "17.0.20.1",
+      "os": "Windows-11-10.0.26200-SP0",
+      "cpu": "Intel Core i7-1185G7",
+      "master": "local[4,3]",
+      "driver_memory": "4g",
+      "sql_shuffle_partitions": 8,
+      "input_partitions": 2,
+      "canonical_edge_partitions": 2,
+      "python_hash_seed": 0
+    },
+    "als_rmse_validation": {
+      "scored_rows": 261074,
+      "sum_of_squared_errors": 23765.745306796434,
+      "recomputed_rmse": 0.301712919779417
+    },
+    "ranking_validation": {
+      "mutual_friends": {
+        "per_user_counts": [
+          {
+            "user": 1704,
+            "hits": 1,
+            "held_out_friends": 1
+          },
+          {
+            "user": 5130,
+            "hits": 0,
+            "held_out_friends": 3
+          },
+          {
+            "user": 5501,
+            "hits": 4,
+            "held_out_friends": 5
+          },
+          {
+            "user": 14806,
+            "hits": 0,
+            "held_out_friends": 4
+          },
+          {
+            "user": 14816,
+            "hits": 0,
+            "held_out_friends": 3
+          },
+          {
+            "user": 22761,
+            "hits": 0,
+            "held_out_friends": 4
+          },
+          {
+            "user": 24408,
+            "hits": 0,
+            "held_out_friends": 1
+          },
+          {
+            "user": 24508,
+            "hits": 1,
+            "held_out_friends": 2
+          },
+          {
+            "user": 38346,
+            "hits": 0,
+            "held_out_friends": 2
+          },
+          {
+            "user": 42559,
+            "hits": 0,
+            "held_out_friends": 1
+          }
+        ],
+        "evaluated_users": 10,
+        "precision_at_k": 0.06,
+        "recall_at_k": 0.23,
+        "hit_rate_at_k": 0.3,
+        "coverage": 1.0,
+        "hits": 6,
+        "held_out_links_for_evaluated_users": 26,
+        "k": 10
+      },
+      "als": {
+        "per_user_counts": [
+          {
+            "user": 1704,
+            "hits": 0,
+            "held_out_friends": 1
+          },
+          {
+            "user": 5130,
+            "hits": 0,
+            "held_out_friends": 3
+          },
+          {
+            "user": 5501,
+            "hits": 0,
+            "held_out_friends": 5
+          },
+          {
+            "user": 14806,
+            "hits": 0,
+            "held_out_friends": 4
+          },
+          {
+            "user": 14816,
+            "hits": 0,
+            "held_out_friends": 3
+          },
+          {
+            "user": 22761,
+            "hits": 0,
+            "held_out_friends": 4
+          },
+          {
+            "user": 24408,
+            "hits": 0,
+            "held_out_friends": 1
+          },
+          {
+            "user": 24508,
+            "hits": 0,
+            "held_out_friends": 2
+          },
+          {
+            "user": 38346,
+            "hits": 0,
+            "held_out_friends": 2
+          },
+          {
+            "user": 42559,
+            "hits": 0,
+            "held_out_friends": 1
+          }
+        ],
+        "evaluated_users": 10,
+        "precision_at_k": 0.0,
+        "recall_at_k": 0.0,
+        "hit_rate_at_k": 0.0,
+        "coverage": 1.0,
+        "hits": 0,
+        "held_out_links_for_evaluated_users": 26,
+        "k": 10
+      }
+    },
+    "replay_matches_measured_results": true,
+    "audit_run_generated_utc": "2026-11-20T17:26:53.841721+00:00"
+  },
+  "timing_includes_inline_verification": false
+}

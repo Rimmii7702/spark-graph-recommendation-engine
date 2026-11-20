@@ -1,0 +1,118 @@
+{
+  "timestamp_utc": "2026-11-12T21:42:26.714675+00:00",
+  "input": "data/wiki-Vote.txt.gz",
+  "vertex_count": 7115,
+  "edge_count": 103689,
+  "pagerank_iterations": 10,
+  "a_outdegree": [
+    {
+      "id": 2565,
+      "outDegree": 893
+    },
+    {
+      "id": 766,
+      "outDegree": 773
+    },
+    {
+      "id": 11,
+      "outDegree": 743
+    },
+    {
+      "id": 457,
+      "outDegree": 732
+    },
+    {
+      "id": 2688,
+      "outDegree": 618
+    }
+  ],
+  "b_indegree": [
+    {
+      "id": 4037,
+      "inDegree": 457
+    },
+    {
+      "id": 15,
+      "inDegree": 361
+    },
+    {
+      "id": 2398,
+      "inDegree": 340
+    },
+    {
+      "id": 2625,
+      "inDegree": 331
+    },
+    {
+      "id": 1297,
+      "inDegree": 309
+    }
+  ],
+  "c_pagerank": [
+    {
+      "id": 4037,
+      "pagerank": 32.7613925903538
+    },
+    {
+      "id": 15,
+      "pagerank": 26.253004957621865
+    },
+    {
+      "id": 6634,
+      "pagerank": 26.16452443488889
+    },
+    {
+      "id": 2625,
+      "pagerank": 23.511515933028516
+    },
+    {
+      "id": 2398,
+      "pagerank": 18.728389390671406
+    }
+  ],
+  "d_components": [
+    {
+      "component": 3,
+      "count": 7066
+    },
+    {
+      "component": 7031,
+      "count": 3
+    },
+    {
+      "component": 7465,
+      "count": 3
+    },
+    {
+      "component": 8074,
+      "count": 3
+    },
+    {
+      "component": 2304,
+      "count": 2
+    }
+  ],
+  "e_triangles": [
+    {
+      "id": 2565,
+      "count": 30940
+    },
+    {
+      "id": 1549,
+      "count": 22003
+    },
+    {
+      "id": 766,
+      "count": 18204
+    },
+    {
+      "id": 1166,
+      "count": 17361
+    },
+    {
+      "id": 2688,
+      "count": 14220
+    }
+  ],
+  "provenance": "Archived real GraphFrames run, 2026-11-12; not a new benchmark run."
+}

@@ -1,0 +1,22 @@
+{
+  "verified_at_utc": "2026-11-12T21:42:31.777387+00:00",
+  "input_sha256": "7d3e53626e14b8b09fb3b396bece9d481ad606bd64ceab066349ff57d4ada7fc",
+  "vertex_count": 7115,
+  "edge_count": 103689,
+  "component_count": 24,
+  "total_undirected_triangles": 608389,
+  "checks": {
+    "number of vertices": true,
+    "number of directed edges": true,
+    "top outdegree values": true,
+    "top indegree values": true,
+    "top weakly connected components": true,
+    "top triangle counts": true,
+    "top PageRank IDs": true,
+    "PageRank numeric values": true,
+    "SNAP published vertex/edge counts": true,
+    "SNAP published largest WCC": true,
+    "SNAP published total triangles": true
+  },
+  "provenance": "Independent verification of the archived 2026-11-12 GraphFrames run."
+}

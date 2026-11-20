@@ -1,0 +1,2 @@
+# Preserve the bytes of reviewed benchmark records.
+results/*.json -text whitespace=cr-at-eol
