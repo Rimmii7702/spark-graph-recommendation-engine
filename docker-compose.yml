@@ -1,0 +1,18 @@
+services:
+  spark:
+    build: .
+    working_dir: /workspace
+    volumes:
+      - .:/workspace
+      - spark_ivy:/root/.ivy2
+      - spark_maven:/root/.m2
+    environment:
+      SPARK_LOCAL_IP: "127.0.0.1"
+      PYTHONPATH: /workspace/src
+    stdin_open: true
+    tty: true
+    command: ["bash"]
+
+volumes:
+  spark_ivy:
+  spark_maven:

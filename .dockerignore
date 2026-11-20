@@ -1,0 +1,15 @@
+.git
+__pycache__
+.pytest_cache
+.venv
+venv
+.env
+.env.*
+artifacts
+data/*
+!data/README.md
+!data/sample_livejournal_adj.txt
+metrics
+run
+*.log
+*.tmp
