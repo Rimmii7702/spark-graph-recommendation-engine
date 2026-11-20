@@ -10,6 +10,7 @@ def top_five(df, name):
 
 def analyze_network(spark, input_path: str, iterations: int) -> dict:
     from graphframes import GraphFrame
+    from pyspark import StorageLevel
     from pyspark.sql import functions as F
 
     durations = {}
@@ -45,7 +46,7 @@ def analyze_network(spark, input_path: str, iterations: int) -> dict:
     cc.unpersist()
     durations["components_seconds"] = round(perf_counter() - tic, 3)
     tic = perf_counter()
-    triangles = graph.triangleCount()
+    triangles = graph.triangleCount(storage_level=StorageLevel.MEMORY_AND_DISK)
     top_tri = top_five(triangles.select("id", "count"), "count")
     triangles.unpersist()
     durations["triangle_count_seconds"] = round(perf_counter() - tic, 3)
